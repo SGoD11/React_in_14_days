@@ -5,27 +5,24 @@ function App() {
   const [addTasks, setAddtasks] = useState([]);
 
   const handleChange = (e) => {
-    e.preventDefault();
     setTasks(e.target.value);
-    console.log("handle change ", e.target.value);
   };
 
-  const addtask = (task) => {
+  const addtask = () => {
     if (tasks.trim() !== "") {  // Prevent adding empty tasks
       setAddtasks([...addTasks, tasks]);
       setTasks("");  // Reset input field after adding task
     }
-    console.log("button pressed and this is the task ", task);
   };
 
   return (
     <div className="App">
       <input type="text" onChange={handleChange} value={tasks} />
-      <button onClick={() => addtask(tasks)}> Submit </button>
+      <button onClick={addtask}> Submit </button>
       <div className="displayItems">
         <ol>
           {addTasks.map((task, index) => (
-            <li key={index}>{task}</li>  // Added key and return statement
+            <li key={index}>{task}</li>
           ))}
         </ol>
       </div>
