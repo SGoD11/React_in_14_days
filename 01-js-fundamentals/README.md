@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Basic Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Basic Todo List Application! This React-based application allows users to manage their daily tasks efficiently. Users can add, delete, and visually track their tasks with a neat line-through animation when they are completed.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add Tasks**: Easily input tasks into the application.
+- **Delete Tasks**: Remove tasks by clicking the checkbox next to each task.
+- **Task Animation**: Enjoy a smooth line-through animation on completed tasks.
+- **Dynamic Footer**: Display real-time time and date at the bottom of the application.
+- **Responsive Design**: Works well on various screen sizes.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: A JavaScript library for building user interfaces.
+- **JavaScript (ES6+)**: Modern JavaScript features including hooks, arrow functions, etc.
+- **HTML/CSS**: For structuring and styling the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+To run this application locally, follow these steps:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+2. **Navigate to the project directory**:
+    ```bash
+    cd <project-directory>
+3. **Install dependencies**:
+    ```bash
+    npm install
+4. **Run the application**:
+    ```bash
+    npm start
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Add a Task**: Type your task in the input field and click the **Submit** button.
+- **Complete a Task**: Click the checkbox next to the task to mark it as complete. This will trigger a line-through animation before deleting the task.
+- **View Current Time and Date**: The footer will always show the current time and date, updating every second.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you would like to contribute to this project, please fork the repository and create a pull request with your changes.
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Inspired by modern task management applications.
+- Special thanks to the React community for their amazing resources.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Developer
 
-## Learn More
+- Subhajit Dhar
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### How to Use This `README.md`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Replace `<repository-url>` with the actual URL of your GitHub repository.
+- Replace `<project-directory>` with the name of your project directory.
+- Feel free to customize any sections further as per your preferences or additional features you may add in the future.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+You can follow me on:
+ [<img src="https://www.trustedreviews.com/wp-content/uploads/sites/54/2023/07/X-app-920x483.png" height=30 align="center"> ](https://x.com/SubhajitDhar000) [<img src ="https://img.freepik.com/premium-vector/instagram-vector-logo-icon-social-media-logotype_901408-390.jpg" height=30 align="center">](https://www.instagram.com/subhajit_dhar_sd/) 
