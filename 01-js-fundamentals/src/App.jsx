@@ -15,16 +15,25 @@ function App() {
     }
   };
 
+ 
+  const deleteTask = (taskToDelete) => {
+    const updatedTasks = addTasks.filter((task) => task !== taskToDelete);
+    setAddtasks(updatedTasks);
+  };
+
   return (
     <div className="App">
       <input type="text" onChange={handleChange} value={tasks} />
       <button onClick={addtask}> Submit </button>
       <div className="displayItems">
-        <ol>
+        <ul>
           {addTasks.map((task, index) => (
-            <li key={index}>{task}</li>
+            <li key={index} style={{listStyleType: "none"}}> <input
+            type="checkbox"
+            onClick={() => deleteTask(task)}
+          />{" "} {task}</li>
           ))}
-        </ol>
+        </ul>
       </div>
     </div>
   );
