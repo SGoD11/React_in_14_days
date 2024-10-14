@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+
 function App() {
   const [tasks, setTasks] = useState("");
   const [addTasks, setAddtasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState(new Set()); // Track completed tasks
   const [currentTime, setCurrentTime] = useState(new Date());
 
   // Handle input change
@@ -22,6 +24,25 @@ function App() {
   const deleteTask = (taskToDelete) => {
     const updatedTasks = addTasks.filter((task) => task !== taskToDelete);
     setAddtasks(updatedTasks);
+    setCompletedTasks((prev) => {
+      const newSet = new Set(prev);
+      newSet.delete(taskToDelete); // Remove from completed tasks
+      return newSet;
+    });
+  };
+
+  // Mark task as completed
+  const toggleTask = (task) => {
+    setCompletedTasks((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(task)) {
+        newSet.delete(task); // Unmark if already completed
+      } else {
+        newSet.add(task); // Mark as completed
+        setTimeout(() => deleteTask(task), 500); // Delete after animation
+      }
+      return newSet;
+    });
   };
 
   // Update time every second
@@ -47,10 +68,10 @@ function App() {
       <div className="todo-container">
         <ul className="task-list">
           {addTasks.map((task, index) => (
-            <li key={index}>
+            <li key={index} className={completedTasks.has(task) ? 'completed' : ''}>
               <input
                 type="checkbox"
-                onClick={() => deleteTask(task)}
+                onChange={() => toggleTask(task)} // Use onChange for checkbox
               />{" "}
               {task}
             </li>
@@ -59,10 +80,11 @@ function App() {
       </div>
       
       <footer>
-        <p className="footer-text">Created by <span>Subhajit</span></p>
+        <p className="footer-text">Created by <span className="author">Subhajit</span></p>
         <p className="time-display">
           {currentTime.toLocaleTimeString()} - {currentTime.toLocaleDateString()}
         </p>
+        <span><small>no of task: {addTasks.length}</small></span>
       </footer>
     </div>
   );
