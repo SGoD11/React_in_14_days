@@ -11,8 +11,10 @@ function App() {
   };
 
   const addtask = (task) => {
-    setAddtasks([...addTasks, task]);  // Fixed spreading of state
-    setTasks("");  // Change to empty string, not an array
+    if (tasks.trim() !== "") {  // Prevent adding empty tasks
+      setAddtasks([...addTasks, tasks]);
+      setTasks("");  // Reset input field after adding task
+    }
     console.log("button pressed and this is the task ", task);
   };
 
