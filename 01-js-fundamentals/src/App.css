@@ -1,0 +1,112 @@
+body {
+  background-color: #2c2f33;
+  color: whitesmoke;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Maintain column layout */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Allow App to grow and fill the height */
+  justify-content: space-between; /* Space between header, content, and footer */
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 1rem; /* Reduced margin */
+  text-align: center;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex: 1; /* Takes up the remaining space */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  padding: 1rem; /* Padding for better spacing */
+  padding-bottom: 80px; /* Prevent content from touching footer */
+}
+
+.input-container {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 0.5rem; /* Space above the input */
+  width: 100%; /* Full width */
+}
+
+.task-input {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #555;
+  margin-right: 1rem; /* Space between input and button */
+  width: 250px; /* Fixed width for the input */
+}
+
+.submit-btn {
+  padding: 0.5rem 1rem;
+  background-color: orange;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: darkorange;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 300px; /* Fixed width for the task list */
+  text-align: left;
+}
+
+.task-list li {
+  background-color: #444;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  position: fixed; /* Fix the footer to the bottom */
+  bottom: 0; /* Stay at the bottom */
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #23272a;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.time-display {
+  font-size: 1rem;
+  color: orange;
+  margin-top: 0.5rem;
+}
+
+span{
+  color: purple;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: oblique;
+  text-shadow: 0.1px 1px #ebe6e6;
+}
