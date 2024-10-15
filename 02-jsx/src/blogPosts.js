@@ -1,87 +1,101 @@
 const blogPosts = [
     {
         id: 1,
-        title: "First Blog Post",
+        title: "Ecma Script 6",
         date: "October 14, 2024",
-        content: "This is the content of my first blog post. React is awesome!",
-        image: "https://via.placeholder.com/300x200.png?text=First+Blog+Post", // Placeholder image
+        content: "ES6+, or Modern JavaScript, is a collection of JavaScript features that make it easier to write and read code",
+        image: "https://es6.io/images/ss/es6/ES6-0001.jpg", // Placeholder image
     },
     {
         id: 2,
-        title: "Another Post",
+        title: "JSX",
         date: "October 13, 2024",
-        content: "This is another blog post content. Here we discuss various aspects of web development.",
-        image: "https://via.placeholder.com/300x200.png?text=Web+Development", // Placeholder image
+        content: "JSX is an XML-like extension to the JavaScript language syntax. Initially created by Facebook for use with React, JSX has been adopted by multiple web frameworks",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtoD0bsU5PpiXMh_umH1qxCIEkxx2ulM0bTg&s", // Placeholder image
     },
     {
         id: 3,
-        title: "Understanding JavaScript Closures",
+        title: "React Components",
         date: "October 12, 2024",
-        content: "JavaScript closures are a powerful feature that allows functions to access variables from an enclosing scope.",
-        image: "https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_960_720.png", // JavaScript code image
+        content: "Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML. Components come in two types, Class components and Function components.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyOIFWCABGvvGxiBWECtzoIoVuwcugBdoKkw&s", // JavaScript code image
     },
     {
         id: 4,
-        title: "A Guide to CSS Flexbox",
+        title: "State Management",
         date: "October 11, 2024",
-        content: "Flexbox is a layout model that allows you to design a complex layout structure with minimal effort.",
-        image: "https://via.placeholder.com/300x200.png?text=CSS+Flexbox", // Placeholder image
+        content: "React state management is the process of managing a React component's state, which determines how the component appears and behaves. The component's current state is represented by the React state, which is subject to change over time because of user input, network requests, or other events.",
+        image: "https://miro.medium.com/v2/resize:fit:596/1*7CnRgjqeM8lLTNeyvpJTgg.png", // Placeholder image
     },
     {
         id: 5,
-        title: "Getting Started with Node.js",
+        title: "Props",
         date: "October 10, 2024",
-        content: "Node.js is a runtime that allows you to run JavaScript on the server side. This post covers the basics of Node.js.",
-        image: "https://via.placeholder.com/300x200.png?text=Node.js", // Placeholder image
+        content: "Props is a special keyword in React that stands for properties and is used for passing data from one component to another. Data with props are passed in a unidirectional flow from parent to child.",
+        image: "https://refine.ams3.cdn.digitaloceanspaces.com/blog/2022-11-16-react-props/social-2.png", // Placeholder image
     },
     {
         id: 6,
-        title: "10 Tips for Writing Clean Code",
+        title: "React Router",
         date: "October 9, 2024",
-        content: "Writing clean code is essential for maintaining and scaling your applications. Here are ten tips to get you started.",
-        image: "https://via.placeholder.com/300x200.png?text=Clean+Code", // Placeholder image
+        content: "React Router is a JavaScript framework that lets us handle client and server-side routing in React applications. It enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view.",
+        image: "https://miro.medium.com/v2/resize:fit:572/0*KgNXU3tz-AOj2k4b.png", // Placeholder image
     },
     {
         id: 7,
-        title: "Exploring React Hooks",
+        title: "State Management Libraries (Redux/Context API)",
         date: "October 8, 2024",
-        content: "React Hooks are a new addition that allows you to use state and other React features without writing a class.",
-        image: "https://via.placeholder.com/300x200.png?text=React+Hooks", // Placeholder image
+        content: "State management is a very critical aspect of building robust React applications. The Context API offers a lightweight solution for simple state management needs, while Redux provides a more scalable and predictable approach for complex state management.",
+        image: "https://miro.medium.com/v2/resize:fit:1400/1*2M17L17cu38wERdzhlBAlw.png", // Placeholder image
     },
     {
         id: 8,
-        title: "Understanding Asynchronous JavaScript",
+        title: "Event Handling",
         date: "October 7, 2024",
-        content: "Asynchronous programming is a crucial part of JavaScript. This post will help you understand how it works.",
-        image: "https://via.placeholder.com/300x200.png?text=Async+JavaScript", // Placeholder image
+        content: "In React. js, event handling refers to the process of responding to user interactions, such as clicks, key presses, and mouse movements, within React components.",
+        image: "https://miro.medium.com/v2/resize:fit:1200/0*4kT-RwgglX1naW7r.png", // Placeholder image
     },
     {
         id: 9,
-        title: "Building RESTful APIs with Express",
+        title: "React Forms",
         date: "October 6, 2024",
-        content: "Express is a web application framework for Node.js. Learn how to build RESTful APIs with it in this guide.",
-        image: "https://via.placeholder.com/300x200.png?text=Express+API", // Placeholder image
+        content: "React Forms are the components used to collect and manage the user inputs. These components includes the input elements like text field, check box, date input, dropdowns etc.",
+        image: "https://res.cloudinary.com/herotofu/image/upload/f_auto,c_limit,w_1920,q_auto/images/guides/react-contact-form-example.png", // Placeholder image
     },
     {
         id: 10,
-        title: "An Introduction to TypeScript",
+        title: "React Developer Tools",
         date: "October 5, 2024",
-        content: "TypeScript is a superset of JavaScript that adds static types. This post covers the benefits and basics of TypeScript.",
-        image: "https://via.placeholder.com/300x200.png?text=TypeScript", // Placeholder image
+        content: "React Developer Tools is a Chrome DevTools extension for the open-source React JavaScript library. It allows you to inspect the React component hierarchies in the Chrome Developer Tools.",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDFHPFK1SdIL3U9LIiB6-bXpGrgmh2FGay9g&s", // Placeholder image
     },
     {
         id: 11,
-        title: "Web Accessibility Best Practices",
+        title: "API Integration",
         date: "October 4, 2024",
-        content: "Web accessibility ensures that everyone, including people with disabilities, can use your web applications.",
-        image: "https://via.placeholder.com/300x200.png?text=Accessibility", // Placeholder image
+        content: "API integration in React typically involves sending and receiving data from external sources. This is often done using the API or libraries like for making HTTP requests. ",
+        image: "https://miro.medium.com/v2/resize:fit:1400/1*CvordU7D_ag0wrHaCXtpbg.jpeg", // Placeholder image
     },
     {
         id: 12,
-        title: "Responsive Web Design: Tips and Tricks",
+        title: "Component Styling",
         date: "October 3, 2024",
-        content: "Responsive web design is essential for providing a good user experience on all devices. Here are some tips to get you started.",
-        image: "https://via.placeholder.com/300x200.png?text=Responsive+Design", // Placeholder image
+        content: "Styled Components is a library for React and React Native that allows you to write CSS in your JavaScript code in a more component-oriented way.",
+        image: "https://miro.medium.com/v2/resize:fit:652/1*N0XV3gco7Ed4brMoxwdjVg.png", // Placeholder image
+    },
+    {
+        id: 13,
+        title: "Performance Optimization",
+        date: "October 3, 2024",
+        content: "Users expect applications to load quickly and respond to their interactions smoothly. In the React ecosystem, performance optimization techniques can significantly enhance the user experience by reducing load times and improving responsiveness.",
+        image: "https://clickysoft.com/wp-content/uploads/2023/05/React-Performance-Optimization-1536x864-1.jpg", // Placeholder image
+    },
+    {
+        id: 14,
+        title: "Testing",
+        date: "October 3, 2024",
+        content: "React Testing Library is a set of helpers that let you test React components without relying on their implementation details. ",
+        image: "https://www.zealousys.com/wp-content/uploads/2024/02/React-Testing-Libraries.webp", // Placeholder image
     },
 ];
 
