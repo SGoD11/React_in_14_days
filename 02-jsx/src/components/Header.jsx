@@ -25,7 +25,7 @@ const Header = () => {
                     <li className="nav-item">
                         <a
                             className={`nav-link  ${activeLink === 'link1' ? 'active fs-3 text-info' : 'text-warning fs-4'}`}
-                            href="#"
+                            href="https://sgod11.github.io/portfolio/#about"
                             onClick={() => handleLinkClick('link1')}
                         >
                             About
