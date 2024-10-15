@@ -28,16 +28,16 @@ const Header = () => {
                             href="#"
                             onClick={() => handleLinkClick('link1')}
                         >
-                            Link
+                            About
                         </a>
                     </li>
                     <li className="nav-item">
                         <a
                             className={`nav-link ${activeLink === 'link2' ? 'active fs-3 text-danger' : 'text-warning fs-4'}`}
-                            href="#"
+                            href="https://sgod11.github.io/portfolio/"
                             onClick={() => handleLinkClick('link2')}
                         >
-                            Link
+                            Portfolio
                         </a>
                     </li>
 
