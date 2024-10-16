@@ -6,7 +6,7 @@ export default function Header() {
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-8 col-md-7 py-4">
-                                <h4>About</h4>
+                                <h4 id="About">About</h4>
                                 <p class="text-body-secondary">My name is Subhajit and I am trying to make it look realistic </p>
                             </div>
                             <div class="col-sm-4 offset-md-1 py-4">
