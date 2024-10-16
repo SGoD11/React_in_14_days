@@ -13,7 +13,7 @@
   
   main{
     background-color: #212529;
-    
+
   }
   .lead{
     color: #ff6600;
@@ -26,3 +26,27 @@
   .album{
     background-color: whitesmoke;
   }
+  
+.section {
+  background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWRrZmZmNGFseGkzeGo3dHFsYm8wN3A5Z3Z1bjkwbTB2dDJhZ3ZrdyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/gdjPEflwQ9qErakao8/giphy.gif') no-repeat center center;
+  background-size: cover; /* Ensures the GIF covers the entire section */
+  height: auto; /* Sets the height of the section, adjust as necessary */
+  color: white; /* Optional: Change text color for better contrast */
+  position: relative; /* Ensures any absolutely positioned children are positioned relative to this section */
+  z-index: 1; /* Ensures the section is on top of the background GIF */
+}
+
+.section-content {
+  position: relative; /* This keeps the content above the background */
+  z-index: 2; /* Higher z-index to ensure it is above the background */
+}
+
+.bg-transparent-whitesmoke {
+  background-color: rgba(255, 255, 255, 0.018); /* Adjust the alpha value for transparency */
+  backdrop-filter: blur(1px); /* Optional: Adds a blur effect behind the background */
+  border-radius: 10px; /* Optional: Rounds the corners of the background */
+  padding: 20px; /* Optional: Adds padding inside the div */
+}
+.bold-text{
+  font-weight: bolder;
+}
