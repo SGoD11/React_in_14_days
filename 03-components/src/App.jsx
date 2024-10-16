@@ -12,17 +12,7 @@ const App = () => {
     <div>
       <Header />
       <Section />
-      {/* Map through Data and return MainContent components */}
-      {Data.map((contents) => (
-        <MainContent
-          key={contents.id}
-          imageUrl={contents.imageUrl}
-          heading={contents.heading}
-          cardText={contents.cardText}
-          launchDate={contents.launchDate}
-        />
-      ))}
-
+      <MainContent />
       <Footer />
     </div>
   );
