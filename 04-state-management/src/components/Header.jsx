@@ -33,8 +33,15 @@ export default function Header() {
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
+
+                                <li>
+                                    <h4>About</h4>
+                                    <p className="p-2 "> "Hey, I’m Subhajit Dhar! Right now, I’m diving into a React revision to sharpen my skills. Whenever I step away from practice, that nagging fear creeps in—the fear of losing track and forgetting what I’ve learned. That’s why I’m pushing myself to stay on top of it. I’m revisiting key concepts, but I’m also blending in some other ideas I’ve picked up along the way, making the process quicker and more efficient!" </p>
+
+                                </li>
+
                                 <li class="nav-item dropdown">
-                                    <p class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <p class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         Links
                                     </p>
                                     <ul class="dropdown-menu">
@@ -44,10 +51,11 @@ export default function Header() {
                                                 <a target="_blank" href="https://www.instagram.com/subhajit_dhar_sd/"><i class="bi bi-instagram"></i></a>
                                                 <a target="_blank" href="https://www.threads.net/@subhajit_dhar_sd"><i class="bi bi-threads"></i></a>
                                                 <a target="_blank" href="mailto:freeplay644@gmail.com"><i class="bi bi-envelope-at"></i></a>
-                                        </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
