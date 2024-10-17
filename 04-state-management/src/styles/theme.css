@@ -10,3 +10,20 @@ html,body{
 .offcanvas{
 background-color: rgba(250, 235, 215, 0.955);
 }
+
+a i {
+  color: inherit; /* Ensure the icon color is inherited from the parent */
+}
+
+a:hover i {
+  color: yellow; /* On hover, change the icon color to yellow */
+}
+
+a:active i {
+  color: red; /* On click/active, change the icon color to red */
+}
+
+a {
+  color: inherit; /* Prevent anchor tag from affecting icon color */
+  text-decoration: none; /* Remove underline from anchor */
+}

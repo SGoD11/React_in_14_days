@@ -33,20 +33,19 @@ export default function Header() {
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Dropdown
-                                    </a>
+                                    <p class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Links
+                                    </p>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
                                         <li>
-                                            <hr class="dropdown-divider" />
+                                            <div class="dropdown-item d-flex justify-content-center gap-3">
+                                                <a target="_blank" href="https://x.com/SubhajitDhar000"><i class="bi bi-twitter-x"></i></a>
+                                                <a target="_blank" href="https://www.instagram.com/subhajit_dhar_sd/"><i class="bi bi-instagram"></i></a>
+                                                <a target="_blank" href="https://www.threads.net/@subhajit_dhar_sd"><i class="bi bi-threads"></i></a>
+                                                <a target="_blank" href="mailto:freeplay644@gmail.com"><i class="bi bi-envelope-at"></i></a>
+                                        </div>
                                         </li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
                                     </ul>
                                 </li>
                             </ul>
