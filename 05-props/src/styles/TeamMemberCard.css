@@ -1,0 +1,28 @@
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .team-image {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .social-links {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    margin-right: 10px;
+    color: #007bff;
+    font-size: 1.5rem;
+  }
+  
+  .social-icon:hover {
+    color: #0056b3;
+  }
+  
