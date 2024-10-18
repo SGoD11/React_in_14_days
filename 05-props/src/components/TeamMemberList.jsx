@@ -11,8 +11,8 @@ function TeamMemberList() {
       imageUrl: 'https://via.placeholder.com/150',
       bio: 'Alice is a highly skilled frontend developer with 5 years of experience.',
       socialLinks: [
-        { platform: 'linkedin', url: 'https://linkedin.com/in/alice' },
-        { platform: 'github', url: 'https://github.com/alice' }
+        { platform: 'linkedin', url: '#' },
+        { platform: 'github', url: '#' }
       ]
     },
     {
@@ -22,8 +22,8 @@ function TeamMemberList() {
       imageUrl: 'https://via.placeholder.com/150',
       bio: 'Bob specializes in creating user-friendly and visually appealing designs.',
       socialLinks: [
-        { platform: 'linkedin', url: 'https://linkedin.com/in/bob' },
-        { platform: 'dribbble', url: 'https://dribbble.com/bob' }
+        { platform: 'linkedin', url: '#' },
+        { platform: 'dribbble', url: '#' }
       ]
     },
     {
@@ -33,7 +33,7 @@ function TeamMemberList() {
       imageUrl: 'https://via.placeholder.com/150',
       bio: 'Charlie has led teams on successful projects across various industries.',
       socialLinks: [
-        { platform: 'linkedin', url: 'https://linkedin.com/in/charlie' }
+        { platform: 'linkedin', url: '#' }
       ]
     },
     // More team members...
