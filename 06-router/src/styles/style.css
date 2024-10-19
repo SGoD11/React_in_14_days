@@ -3,7 +3,37 @@
    padding: 0;
 }
 
+.navbar-brand{
+    list-style: none;
+    padding: 23px;
+}
 .red{
-    background-color: red;
+   
     color: antiquewhite;
 }
+li{
+    list-style: none;
+}
+
+li a{
+    color: green;
+    
+}
+/* Add these styles in your CSS file */
+.nav-link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-link.red {
+    color: orange;
+    text-decoration: wavy; /* Add an underline for active links */
+  }
+  
+  .nav-link:hover {
+    color: green; /* On hover, links turn green */
+  }
+  
+  ul{
+    width: 100vw;
+  }
