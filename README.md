@@ -38,7 +38,7 @@ Each subfolder corresponds to a day and a specific React topic. Follow the struc
 
 ### 6. **Day 6 - React Router**
    - **Folder**: `/06-router`
-   - **Project**: Multi-Page Recipe Website
+   - **Project**: Multi-Page Website
    - **Objective**: Implement navigation and routing using `react-router-dom` to create a multi-page application.
 
 ### 7. **Day 7 - State Management Libraries (Redux/Context API)**

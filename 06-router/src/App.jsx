@@ -8,7 +8,7 @@ import User from "./pages/User";
 function App() {
   return (
     <Router>
-      <div className="app-container bg-dark text-green">
+      
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/user/:username" element={<User />} />
         </Routes>
-      </div>
+      
     </Router>
   );
 }
