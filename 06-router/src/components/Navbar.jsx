@@ -16,10 +16,10 @@ function Navbar() {
                     </li>
                     <li>
                         <NavLink 
-                          to="/recipes" 
+                          to="/prices" 
                           className={(e) => e.isActive ? "nav-link red" : "nav-link"}
                         >
-                          Recipes
+                          Prices
                         </NavLink>
                     </li>
                     <li>
@@ -27,7 +27,7 @@ function Navbar() {
                           to="/about" 
                           className={(e) => e.isActive ? "nav-link red" : "nav-link"}
                         >
-                          About
+                          Album
                         </NavLink>
                     </li>
                 </ul>
