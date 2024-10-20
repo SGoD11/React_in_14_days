@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Shopping Cart App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates how to manage global state in a React application using both **Context API** and **Redux**. The app allows users to browse products and add them to a shopping cart. The global state of the cart is managed using Context API in some components and Redux in others, to showcase both methods of state management.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Add products to the cart using **Context API**.
+- Display the cart contents and remove products from the cart using **Redux**.
+- Simple and responsive design using **Bootstrap**.
 
-### `npm start`
+## Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+/src /components 
+- Cart.js 
+# Cart component using Redux 
+- ProductList.js 
+# Product listing component using Context API 
+- ProductItem.js 
+# Individual product component 
+/context 
+- CartContext.js 
+# Context API implementation for cart state management 
+/redux 
+- cartSlice.js 
+# Redux slice for cart state management 
+App.js 
+# Main app component 
+index.js 
+# Entry point of the app (Redux & Context API providers)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js and npm installed.
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+2. Navigate to the project directory:
+3. Install the dependencies: `npm install -y`
+4. Start the development server: `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app will be available at `http://localhost:3000`.
 
-### `npm run eject`
+## State Management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Context API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Used in the `ProductList` and `ProductItem` components to handle adding products to the cart.
+- The `CartContext.js` file contains the context logic for managing cart items.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Redux
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Used in the `Cart` component to manage global cart state.
+- The `cartSlice.js` file defines actions (`addItem`, `removeItem`) and reducers to update the cart.
 
-## Learn More
+## Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [React](https://reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [Redux](https://redux.js.org/)
+- [Context API](https://reactjs.org/docs/context.html)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Feel free to submit issues or pull requests for enhancements or bug fixes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
