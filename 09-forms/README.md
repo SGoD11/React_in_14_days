@@ -1,70 +1,88 @@
-# Getting Started with Create React App
+# Contact Form with Validation (React)
+This is a simple contact form built with React that demonstrates the use of controlled components, form validation, and state management. After the user submits the form, the submitted data is displayed at the bottom for 5 seconds before disappearing.
+## Features
+- **Controlled Components:** Each form input is controlled using React's useState hook, allowing real-time data handling.
+- **Form Validation:** Input fields are validated to ensure that:
+    - The name field is not empty.
+    - The email field is correctly formatted.
+    - The message field is not empty.
+- **Display Submitted Data:** Upon successful form submission, the user's input is displayed for 5 seconds at the bottom of the form.
+- **Data Disappears:** The displayed data automatically disappears after 5 seconds.
+## Project Structure
+- **App.js:** The main file where the entire form logic, state management, validation, and conditional rendering of submitted data are handled.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Code Explanation
+1. State Management
+The component uses the following state variables:
+    - `name`, `email`, and `message` to store form input values.
+    - `errors` to store validation error messages for each field.
+    - `submittedData` to store the data entered by the user after successful form submission.
+    ```bash
+        const [name, setName] = useState("");
+        const [email, setEmail] = useState("");
+        const [message, setMessage] = useState("");
+        const [errors, setErrors] = useState({});
+        const [submittedData, setSubmittedData] = useState(null);
 
-## Available Scripts
+2. Form Validation
 
-In the project directory, you can run:
+    The `validate` function checks the values in the form:
 
-### `npm start`
+        - Ensures the name field is not empty.
+        - Ensures the email field contains a valid email address using a regular expression.
+        - Ensures the message field is not empty.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    If any field is invalid, the corresponding `error` message is added to the errors state and displayed below the field.
+    ```bash
+    const validate = () => {
+    const newErrors = {};
+    if (!name) newErrors.name = "Name is required";
+    if (!email || !/\S+@\S+\.\S+/.test(email)) newErrors.email = "Valid email is required";
+    if (!message) newErrors.message = "Message cannot be empty";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;};
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Form Submission
 
-### `npm test`
+    When the form is submitted:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        - Validation is performed using the `validate()` function.
+        - If the form passes validation, the input data is stored in  `submittedData`   and displayed at the bottom of the form.
+        - The form is reset after submission, and the submitted data is cleared after 5 seconds using `setTimeout`.
 
-### `npm run build`
+    ```bash
+    const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    if (validate()) {
+        setSubmittedData({ name, email, message });
+        setName("");
+        setEmail("");
+        setMessage("");
+        setErrors({});
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        // Remove the submitted data after 5 seconds
+        setTimeout(() => {
+        setSubmittedData(null);
+        }, 5000);
+    }
+    };
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Displaying Submitted Data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    The submitted data is displayed conditionally at the bottom of the form, and it disappears after 5 seconds.
+    ```bash 
+        {submittedData && (
+        <div className="mt-4">
+        <h4>Submitted Data</h4>
+        <p><strong>Name:</strong> {submittedData.name}</p>
+        <p><strong>Email:</strong> {submittedData.email}</p>
+        <p><strong>Message:</strong> {submittedData.message}</p>
+        </div>
+        )}
 
-### `npm run eject`
+## Technologies Used
+- **React**: For building user interfaces and managing state.
+- **Bootstrap**: For styling the form and layout.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+    This project is licensed under the MIT License.
