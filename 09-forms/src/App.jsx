@@ -7,6 +7,7 @@ function App() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({}); // State for error messages
+  const [submittedData, setSubmittedData] = useState(null); // State to store submitted data
 
   // Validation function
   const validate = () => {
@@ -22,14 +23,19 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-      // If form is valid, log the data (could send to a server here)
-      console.log({ name, email, message });
+      // If form is valid, store the form data
+      setSubmittedData({ name, email, message });
+      
       // Clear form after submission
       setName("");
       setEmail("");
       setMessage("");
       setErrors({});
-      alert("Form submitted successfully!");
+
+      // Automatically clear the submitted data after 5 seconds
+      setTimeout(() => {
+        setSubmittedData(null); // Clear the submitted data
+      }, 5000); // 5000 ms = 5 seconds
     }
   };
 
@@ -77,6 +83,16 @@ function App() {
           Submit
         </button>
       </form>
+
+      {/* Display submitted data if present */}
+      {submittedData && (
+        <div className="mt-4">
+          <h4>Submitted Data</h4>
+          <p><strong>Name:</strong> {submittedData.name}</p>
+          <p><strong>Email:</strong> {submittedData.email}</p>
+          <p><strong>Message:</strong> {submittedData.message}</p>
+        </div>
+      )}
     </div>
   );
 }
