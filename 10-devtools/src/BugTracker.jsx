@@ -16,6 +16,7 @@ const BugTracker = () => {
     const newBugObject = { id: bugs.length + 1, name: newBug };
     
     // Create a new array by spreading the existing bugs and adding the new bug
+    // const newBugsArray = bugs.push([...bugs ,newBugObject]);   never do this push mistake as it will push but the state will be broke so better to use the set function assosiated with it
     const newBugsArray = [...bugs, newBugObject];
     
     // Update state with the new array
