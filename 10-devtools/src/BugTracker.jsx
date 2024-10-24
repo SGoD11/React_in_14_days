@@ -10,15 +10,19 @@ const BugTracker = () => {
     setNewBug(e.target.value);
   };
 
-  // Logic error: push mutates the array directly
+  // Corrected addBug function
   const addBug = () => {
-    console.log("This is the new bug baby",newBug,"and the length is ", bugs.length+1)
-    const newBugs = { id: bugs.length + 1, name: newBug };
-    const bugArray = bugs.push([...bugs ,newBugs]);
-    console.log("This is newBugs", newBugs);
-    console.log("This i bugs", bugs);
-    setBugs(bugArray); // Wrong: bugs won't update correctly
-    setNewBug(''); // Clear the input after adding
+    // Create a new bug object
+    const newBugObject = { id: bugs.length + 1, name: newBug };
+    
+    // Create a new array by spreading the existing bugs and adding the new bug
+    const newBugsArray = [...bugs, newBugObject];
+    
+    // Update state with the new array
+    setBugs(newBugsArray);
+    
+    // Clear the input field after adding the bug
+    setNewBug('');
   };
 
   return (
@@ -28,10 +32,10 @@ const BugTracker = () => {
       {/* Bug list */}
       <ul className="list-group mb-4">
         {bugs.map((bug) => (
-                <li key={bug.id} className="list-group-item">
-                  {bug.name}
-                </li>
-            ))}
+          <li key={bug.id} className="list-group-item">
+            {bug.name}
+          </li>
+        ))}
       </ul>
 
       {/* Form to add new bug */}
